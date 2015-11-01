@@ -1,5 +1,5 @@
 /***********************************************\
-	lemoid 2014	
+	Krzysztof Starzyk 2014	
 \************************************************
 
 /*
@@ -7,7 +7,7 @@
 	 
 		
 	Main:
-		readData 				-  take data from input
+		readData -  take data from input
 		solve/4 :
 			emptyMatrix/3	- create empty matrix with uninitialised variables
 			startMatrix/2	- setting start matrix
@@ -16,18 +16,18 @@
 
 	Pomocniczne :
 
-		conn/6 						- check if move is possibly in any direction N\S\E\W
-		node/4 						- check the value of field
-		putNum/3 					- initialised variable 
+		conn/6 			- check if move is possibly in any direction N\S\E\W
+		node/4 			- check the value of field
+		putNum/3 		- initialised variable 
 		fillWithNum/3 		- fill matrix with values from list
-		row/3 						- returns n-th row
-		column/3					- returns m-th column
+		row/3 			- returns n-th row
+		column/3		- returns m-th column
 
 	Zmienne:
-		(N,M) 					- cordinates of field, N - row, M - column 
+		(N,M) 			- cordinates of field, N - row, M - column 
 		Nsize, Msize 		- size of matrix NsizexMsize
-		Pairs 					- List of pair of points in matrix,  ( (N1,M1), (N2,M2) )
-		Acc 						- accumulator
+		Pairs 			- List of pair of points in matrix,  ( (N1,M1), (N2,M2) )
+		Acc 			- accumulator
 
 */
 %%%%%%%% 
@@ -38,9 +38,9 @@
 		2. Putting start position on matrix ( given by list of pairs ).
 		3. Finding way between pair of points i (i = 1,2,..|Pairs|).
 			If path between pair of points ...: 
-			3a. Exists									  --> Step 3 && i++.
-			3b. Exists && i == |Pairs| 		--> Step 4.
-			3c. Doesn't exists 						--> Step 3 && i--.
+			3a. Exists			--> Step 3 && i++.
+			3b. Exists && i == |Pairs| 	--> Step 4.
+			3c. Doesn't exists 		--> Step 3 && i--.
 			3d. Doesn't exists && i == 1 	--> Step 5. 
 		4. Print the solution.
 		5. Solution doesn't exist.
